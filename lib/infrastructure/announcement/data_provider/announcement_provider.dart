@@ -1,4 +1,5 @@
 import 'dart:convert';
+<<<<<<< HEAD
 
 import 'package:http/http.dart' as http;
 
@@ -7,6 +8,13 @@ import 'package:labpract/domain/announcement/entity/announcement_model.dart';
 class AnnouncementDataProvider  {
   final announcementUrl =
       'http://127.0.0.1:7000/api/announcements/';
+=======
+import 'package:http/http.dart' as http;
+import 'package:miesitu/domain/announcement/entity/announcement_model.dart';
+
+class AnnouncementDataProvider {
+  final announcementUrl = 'http://127.0.0.1:7000/api/announcements/';
+>>>>>>> f1942a148f6737ce258d15325cd8de66c71659fe
   // final announcementUrl =
   //     'https://6295158f63b5d108c199b161.mockapi.io/api/announcements';
 

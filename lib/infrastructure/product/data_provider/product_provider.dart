@@ -2,7 +2,11 @@ import 'dart:convert';
 
 import 'package:http/http.dart' as http;
 
+<<<<<<< HEAD
 import 'package:labpract/domain/product/entity/product_model.dart';
+=======
+import 'package:miesitu/domain/product/entity/product_model.dart';
+>>>>>>> f1942a148f6737ce258d15325cd8de66c71659fe
 
 class ProductDataProvider {
   // final productUrl = 'https://6295158f63b5d108c199b161.mockapi.io/api/products';

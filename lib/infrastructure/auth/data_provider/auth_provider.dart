@@ -43,6 +43,7 @@ Future<bool> registerUser(Register register) async {
   String firstName = register.first_name;
   String lastName = register.last_name;
 
+<<<<<<< HEAD
   // String route = 'https://mitane-backend.herokuapp.com/auth';
   // String route = 'http://127.0.0.1:8000/api/register';
   // switch (role) {
@@ -58,10 +59,13 @@ Future<bool> registerUser(Register register) async {
   // }
 
   // try {
+=======
+>>>>>>> f1942a148f6737ce258d15325cd8de66c71659fe
   print(username);
   print(email);
 
   final response =
+<<<<<<< HEAD
       await http.post(Uri.parse("http://127.0.0.1:8000/api/register/"),
           // headers: <String, String>{
           //   'Content-Type': 'application/json; charset=UTF-8',
@@ -77,6 +81,18 @@ Future<bool> registerUser(Register register) async {
         "first_name": firstName,
         "last_name": lastName,
       });
+=======
+      await http.post(Uri.parse("http://127.0.0.1:8000/api/register/"), body:
+          //  jsonEncode(<String, String>{
+          {
+    "username": username,
+    "email": email,
+    "password": password,
+    "password2": password2,
+    "first_name": firstName,
+    "last_name": lastName,
+  });
+>>>>>>> f1942a148f6737ce258d15325cd8de66c71659fe
   // print('herereeeeeeeeeeeeeeeeeeeeeee');
   print(response.body);
   if (response.statusCode == 201) {

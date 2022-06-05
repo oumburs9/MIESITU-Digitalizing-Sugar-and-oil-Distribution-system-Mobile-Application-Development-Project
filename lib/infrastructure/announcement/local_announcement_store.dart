@@ -1,7 +1,14 @@
+<<<<<<< HEAD
 import 'package:labpract/domain/announcement/announcement_model.dart';
 import 'package:labpract/domain/product/entity/product_model.dart';
 import 'package:labpract/gloabl/local_database_provider.dart';
 import 'package:labpract/infra/local_storage_database.dart';
+=======
+import 'package:miesitu/domain/product/entity/product_model.dart';
+import 'package:miesitu/gloabl/local_database_provider.dart';
+import 'package:miesitu/infrastructure/local_storage_database.dart';
+import 'package:miesitu/domain/announcement/announcement_model.dart';
+>>>>>>> f1942a148f6737ce258d15325cd8de66c71659fe
 
 class LocalProductStorage {
   // late Database _database;
