@@ -4,11 +4,8 @@ import 'package:http/http.dart' as http;
 
 import 'package:labpract/domain/announcement/entity/announcement_model.dart';
 
-class AnnouncementDataProvider  {
-  final announcementUrl =
-      'http://127.0.0.1:7000/api/announcements/';
-  // final announcementUrl =
-  //     'https://6295158f63b5d108c199b161.mockapi.io/api/announcements';
+class AnnouncementDataProvider {
+  final announcementUrl = 'http://127.0.0.1:7000/api/announcements/';
 
   Future<Announcement> createAnnounce(Announcement announcement) async {
     final response = await http.post(
@@ -60,6 +57,7 @@ class AnnouncementDataProvider  {
         'description': announcement.description,
       }),
     );
+
     if (response.statusCode == 200) {
       print("Successful updation of a Announcement");
       return Announcement.fromJson(jsonDecode(response.body));
