@@ -29,16 +29,6 @@ class Register extends Authentication {
   List<Object> get props =>
       [username, email, first_name, last_name, password, password2];
 
-  // factory Register.fromJson(Map<String, dynamic> json) {
-  //   return Register(
-  //       username: json['username'],
-  //       email: json['email'],
-  //       password: json['password'],
-  //       password2: json['password2'],
-  //       first_name: json['first_name'],
-  //       last_name: json['last_name']);
-  // }
-
   @override
   String toString() =>
       '{"username": "$username", "email": "$email", "password2": "$password2","password": "$password", "first_name":"$first_name", "last_name":"$last_name"}';
@@ -55,11 +45,11 @@ class Login extends Authentication {
 User? currentUser;
 
 class User extends Authentication {
-  final String id;
+  final String? id;
 
   final String username;
 
-  // final String token;
+  final String accesstoken;
 
   final String email;
 
@@ -69,33 +59,32 @@ class User extends Authentication {
 
   final String password;
 
-  final String first_name;
+  final String? first_name;
 
-  final String last_name;
+  final String? last_name;
+  final String refreshtoken;
 
   User({
-    required this.id,
+    this.id,
     required this.username,
-    // required this.token,
+    required this.accesstoken,
     required this.email,
     required this.password,
-    required this.first_name,
-    required this.last_name,
+    this.first_name,
+    this.last_name,
+    required this.refreshtoken,
   });
-  //  :
-
-  // this.avatar =
-  // "https://avatars.dicebear.com/api/personas/your-custom-seed.svg";
 
   factory User.fromJson(Map<String, dynamic> json) {
     return User(
       id: json['_id'],
       username: json['username'],
-      // token: json['token'],
+      accesstoken: json['accesstoken'],
       email: json['email'],
       password: json['password'],
       first_name: json['first_name'],
       last_name: json['last_name'],
+      refreshtoken: json['refreshtoken'],
     );
   }
 }
