@@ -1,19 +1,24 @@
 import 'package:flutter/material.dart';
+import 'package:splash_screen/splashpage/splashscreen.dart';
 
-void main() => runApp(Miesitu());
+void main() {
+  runApp(const Miesitu());
+}
 
 class Miesitu extends StatelessWidget {
+  const Miesitu({Key? key}) : super(key: key);
+
+  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: Scaffold(
-        appBar: AppBar(
-          title: const Text("MIESITU"),
-        ),
-        body: const Center(
-          child: Text("Miesitu"),
-        ),
+      title: 'Flutter Demo',
+      theme: ThemeData(
+        
+        
+        primarySwatch: Colors.blue,
       ),
+      home: SplashScreen(),
     );
   }
 }
