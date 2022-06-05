@@ -1,6 +1,6 @@
 import 'package:miesitu/domain/product/entity/product_model.dart';
 import 'package:miesitu/gloabl/local_database_provider.dart';
-import 'package:miesitu/infra/local_storage_database.dart';
+import 'package:miesitu/infrastructure/local_storage_database.dart';
 import 'package:miesitu/domain/announcement/announcement_model.dart';
 
 class LocalProductStorage {
